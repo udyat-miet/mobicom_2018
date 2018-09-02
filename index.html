@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="Mobicom is an annual mobile application development contest hosted by MIET, Meerut.">
+    <title>Mobicom</title>
+    <link href="main.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--Favicon Files! Contains generated specific device configuration. Generated using http://realfavicongenerator.net -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/manifest.json">
+    <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="assets/favicon/favicon.ico">
+    <meta name="msapplication-config" content="assets/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <link href="https://fonts.googleapis.com/css?family=Vibur" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                                      <span class="icon-bar"></span>
+                                      <span class="icon-bar"></span>
+                                      <span class="icon-bar"></span> 
+                                    </button>
+                <a class="navbar-brand" href="#">
+                    <img src="assets/mobi.png" class="img-responsive ">
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#timeline">Timeline</a></li>
+                    <li><a href="#coc">Code of Conduct</a></li>
+                    <li><a href="#team">Team</a></li>
+                    <li><a href="#FAQs">FAQs</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#register" type="button"><span class="glyphicon glyphicon-user"></span> Register</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+
+        <div class="row">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                    <li data-target="#myCarousel" data-slide-to="3"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    <div class="item active" style="background-image: url(assets/slide1.jpg); background-size: cover;background-position:center;">
+                        <img src="assets/slide1.jpg" alt="Chania">
+                        <div class="carousel-caption jumbotron">
+                            <h1>Mobicom</h1>
+                            <p>Mobicom is a competitive platform to present ideas, develop mobile apps and win exciting cash prizes.</p>
+                        </div>
+                    </div>
+
+                    <div class="item" style="background-image: url(assets/slide2.jpg); background-size: cover;">
+                        <img src="assets/slide2.jpg " alt="Chicago " class="img-responsive ">
+                        <div class="carousel-caption jumbotron">
+                            <h2>Present your mobile app idea</h2>
+                        </div>
+                    </div>
+
+                    <div class="item " style="background-image: url(assets/slide3.jpg); background-size: cover; background-position: 20%;">
+                        <img src="assets/slide3.jpg " alt="New York " class="img-responsive">
+                        <div class="carousel-caption jumbotron">
+                            <h2><strong>Design, develop and test your mobile app</strong></h2>
+                        </div>
+                    </div>
+                    <div class="item " style="background-image: url(assets/slide4.jpg); background-size:cover; background-position:70%;  ">
+                        <img src="assets/slide4.jpg " alt="New York " class="img-responsive">
+                        <div class="carousel-caption jumbotron">
+                            <h2 id="piggy"><strong>Win exciting prizes</strong></h2>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Left and right controls -->
+                <a class="left carousel-control" href="#myCarousel " data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left "></span>
+                    <span class="sr-only ">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel " data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right "></span>
+                    <span class="sr-only ">Next</span>
+                </a>
+            </div>
+        </div>
+        <a href="https://miet.ac.in" title="Meerut Institute of Engineering and technology" id="miet-logo">
+            <img class="img-responsive" src="assets/miet-logo.png" alt="MIET">
+        </a>
+        <div class="row jumbotron" id="timeline">
+            <h1>Timeline</h1><br>
+            <div class="col-sm-4 flash">
+                <i class="fas fa-address-card flash"><span>  Register</span></i>
+                <h6>xx/xx/xx</h6><br>
+
+            </div>
+            <div class="col-sm-4" id="tm">
+                <i class="fab fa-accusoft"><span>  Round 1</span></i>
+                <h5>Present app idea</h5>
+                <h6>xx/xx/xx</h6><br>
+
+            </div>
+            <div class="col-md-4">
+                <i class="fab fa-affiliatetheme"><span>  Round 2</span></i>
+                <h5>Present mobile app</h5>
+                <h6>xx/xx/xx</h6><br><br>
+            </div>
+
+            <a href="#register" class="btn btn-primary btn-lg " role="button">Apply</a>
+
+        </div>
+        <div id="coc" class="row">
+            <h1 class="jumbotron" style="text-align:center;"><b>Code of Conduct</b></h1>
+            <div class="col-md-6">
+                <h3>Rules for Round 2</h3>
+                <ol type="a">
+                    <li>Selected teams will develop and present their mobile applications</li>
+                    <li>Selected teams will also have to present source code of their application. We DO NOT require you to submit your source code. Although, selected teams will have to explain working of their application on basis of their source code.</li>
+                    <li>Selected teams will have to present live demo of their application and its functionalities.
+                        <li>All teams
+                            <ol type="i">
+                                <li>will be allotted 15 minutes to present their app</li>
+                                <li>are allowed to use any platform to develop their apps</li>
+                                <li>should bring their own mobile devices and accessories to showcase their applications. Projector and Laptop will be provided with an option to broadcast mobile's display feed to Projector.</li>
+                            </ol>
+                        </li>
+                        <li>Winner will be selected on the basis of originality &amp; practicality of idea and usability of presented mobile app</li>
+                </ol>
+            </div>
+            <div class="col-md-6">
+                <h3>Content Restrictions</h3>
+                The submitted ideas and/or mobile apps must not contain
+                <ol type="a">
+                    <li>Nudity, lewd or vulgar behaviour.</li>
+                    <li>Material that violates or infringes another’s rights, including but not limited to privacy.</li>
+                    <li>Publicity or intellectual property rights, including but not limited to copyright patent.</li>
+                    <li>Trademark, trade secret infringement or another proprietary right of any party.</li>
+                    <li>Brand names or trademarks.</li>
+                    <li>Material that is hateful, tortuous, defamatory, slanderous or libellous.</li>
+                    <li>Gambling application or sites.</li>
+                    <li>Material that includes content that is deemed inappropriate, indecent, obscene or otherwise does not comply with the Content Restrictions, as determined by Contest Administrator in its sole disc.</li>
+                    </li>
+                </ol>
+                <br><br>
+            </div>
+        </div>
+
+
+        <div id="team">
+            <h1 class="jumbotron"><b>Behind the scene</b></h1>
+            <h2 style="text-align:center;"><b><u>Mentors</u></b></h2>
+            <div class="row">
+                <div class="col-md-4">
+
+                    <img class="dp " src="assets/img/prof_mk.jpg" />
+                    <h4 class="name">Dr. Mukesh Rawat</h4>
+                    <h6 class="title">Head of Department<br />Department of Computer Science &amp; Engineering</h6>
+                </div>
+                <div class="col-md-4">
+                    <img class="dp " src="assets/img/prof_pp.jpg" />
+                    <h4 class="name">Prof. Pradeep Pant</h4>
+                    <h6 class="title">Professor Incharge (CSE/IT)<br />Department of Computer Science &amp; Engineering</h6>
+
+                </div>
+                <div class="col-md-4">
+                    <img class="dp" src="assets/img/prof_aj.jpg" />
+                    <h4 class="name">Dr. Ajay Kumar</h4>
+                    <h6 class="title">Dean of Student Welfare<br />Head of Department, MBA</h6>
+
+                </div>
+            </div>
+            <div class="row" id="Committee">
+                <br>
+                <h1><b>Team</b></h1>
+
+                <div class="col-md-1" id="f" style="padding-left: 25px">
+
+                    <img class="dp" src="assets/img/ashutosh.jpg" />
+                    <h4 class="name">Ashutosh Gangwar</h4>
+
+
+                    <h4 class="title">Committee</h4>
+
+
+                    <h4 class="linkedin">
+                        <a class="secondary-colored-dark" target="_blank" href="https://www.linkedin.com/in/ashutoshgngwr/"><i class="fab fa-linkedin-in"></i></a>
+                    </h4>
+
+                </div>
+                <div class="col-md-1">
+
+                    <img class="dp" src="assets/img/shagun.jpeg" /></h4>
+                    <h4 class="name">Shagun Malik</h4>
+
+
+                    <h4 class="title">Committee</h4>
+
+
+                    <h4 class="linkedin">
+                        <a class="secondary-colored-dark" target="_blank" href="https://www.linkedin.com/in/shagun-malik-672716152/"><i class="fab fa-linkedin-in"></i></a>
+                    </h4>
+
+                </div>
+                <div class="col-md-1">
+
+                    <img class="dp" src="assets/img/nishant.jpg" /></h4>
+                    <h4 class="name">Nishant Sharma</h4>
+
+
+                    <h4 class="title">Committee</h4>
+
+
+                    <h4 class="linkedin">
+                        <a class="secondary-colored-dark" target="_blank" href="https://www.linkedin.com/in/nishant-sharna-58a349149">
+                            <i class="fab fa-linkedin-in"></i></a>
+                    </h4>
+
+                </div>
+                <div class="col-md-1">
+
+                    <img class="dp" src="assets/img/umar.jpg" /></h4>
+                    <h4 class="name">Umar Alam</h4>
+
+
+                    <h4 class="title">Committee</h4>
+
+
+                    <h4 class="linkedin">
+                        <a data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                            <i class="fas fa-phone-volume"></i>
+                        </a>
+                        <div class="collapse" id="collapseExample">
+                            <div class="card card-body">
+                                7417576582
+                            </div>
+                        </div>
+                        <a class="secondary-colored-dark" target="_blank" href="https://www.linkedin.com/in/mohdumaralam/">
+                            <i class="fab fa-linkedin-in"></i> </a>
+                        <a class="secondary-colored-dark" target="_blank" href="https://www.instagram.com/umar.alam.siddiqui/?hl=en">
+                            <i class="fab fa-instagram"></i></a>
+                    </h4>
+
+                </div>
+                <div class="col-md-1">
+
+                    <img class="dp" src="assets/img/prachi.jpeg" /></h4>
+                    <h4 class="name">Prachi Sharma</h4>
+
+
+                    <h4 class="title">Committee</h4>
+
+
+                    <h4 class="linkedin">
+                        <a class="secondary-colored-dark" target="_blank" href="https://www.linkedin.com/profile/view?id=AAIAACS-I7kBG12JmM1USe_PD_mMeYJmno8Orqk"><i class="fab fa-linkedin-in"></i></a>
+                    </h4>
+
+                </div>
+                <div class="col-md-1">
+
+                    <img class="dp" src="assets/img/ravi.jpeg" /></h4>
+                    <h4 class="name">Ravi<br> Soni </h4>
+
+
+                    <h4 class="title">Committee</h4>
+
+
+                    <h4 class="linkedin">
+                        <a class="secondary-colored-dark" target="_blank" href="https://www.linkedin.com/in/ravi-soni-32139198/"><i class="fab fa-linkedin-in"></i></a>
+                    </h4>
+
+                </div>
+                <div class="col-md-1">
+
+                    <img class="dp" src="assets/img/riya.png" /></h4>
+                    <h4 class="name">Riya Deshwal</h4>
+
+
+                    <h4 class="title">Committee</h4>
+
+
+                    <h4 class="linkedin">
+                        <a class="secondary-colored-dark" target="_blank" href="https://www.linkedin.com/in/riya-deshwal-9ab538152"><i class="fab fa-linkedin-in"></i></a>
+                    </h4>
+
+                </div>
+                <div class="col-md-1">
+
+                    <img class="dp" src="assets/img/tushit.jpeg" /></h4>
+                    <h4 class="name">Tushit Agarwal</h4>
+
+
+                    <h4 class="title">Committee</h4>
+
+
+                    <h4 class="linkedin">
+                    </h4>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="FAQs">
+
+    </div>
+    </div>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAN69IlP9jPu49xMy6VJNmxd3dorWOSHj4&callback=initMap">
+    </script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <div>Icons made by <a href="https://www.flaticon.com/authors/ddara" title="dDara">dDara</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0"
+            target="_blank">CC 3.0 BY</a></div>
+</body>
+
+</html>

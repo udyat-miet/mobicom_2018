@@ -1,0 +1,152 @@
+    html {
+        scroll-behavior: smooth;
+    }
+    
+    h5,
+    h6 {
+        margin-top: 0% !important;
+        color: #0b141d !important;
+    }
+    
+    #tm,
+    #tm>h5,
+    #tm>h6 {
+        color: #ffffff !important;
+    }
+    
+    .logo {
+        display: inline;
+    }
+    
+    .navbar-brand img {
+        position: relative;
+        bottom: 5px;
+    }
+    
+    .header {
+        background: #bdc3c7;
+        /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #2c3e50, #ffffff);
+        /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to left, #2c3e50, #dfdada);
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+    
+    .jumbotron {
+        background-color: transparent !important;
+    }
+    
+    .navbar {
+        margin-bottom: 0px !important;
+        border-radius: 0% !important;
+    }
+    
+    #miet-logo img {
+        position: absolute;
+        top: 2%;
+        left: 16px;
+        filter: drop-shadow(0 0 6px #efefef);
+        padding-top: 51px;
+    }
+    
+    @media only screen and (max-width: 720px) {
+        #miet-logo img {
+            width: 10%;
+        }
+        .carousel-caption h1,
+        h2 {
+            font-size: 350% !important;
+        }
+        .navbar-brand img {
+            width: 50%;
+            bottom: 0;
+        }
+        .jumbotron p,
+        h2 {
+            font-weight: 700 !important;
+            padding-bottom: 5px !important;
+            /*margin-bottom: -30px !important;*/
+            font-size: 150% !important;
+        }
+        #tm,
+        #tm>h5,
+        #tm>h6 {
+            color: black!important;
+        }
+        .carousel-inner>.item {
+            height: 70vh !important;
+        }
+        .carousel-inner>.item>img {
+            display: none !important;
+            visibility: hidden;
+        }
+        #f {
+            padding-left: 0px !important;
+        }
+    }
+    
+    #piggy {
+        text-align: left;
+        color: rgb(.992, .844, .786);
+    }
+    
+    #timeline {
+        background-image: url(assets/redundant.jpg);
+        background-size: cover;
+        text-align: center;
+        font-family: 'Lobster', cursive;
+        font-size: 200%;
+        color: black;
+        font-weight: 700;
+    }
+    
+    #timeline i:hover {
+        color: rgb(248, 250, 250);
+    }
+    
+    #coc>.col-md-6 {
+        padding-left: 30px;
+        padding-right: 30px;
+        text-align: left;
+        padding-bottom: 30px;
+        border-left: 1px solid #0396D1;
+        border-right: 1px solid #0396D1;
+        line-height: 170%;
+    }
+    
+    body {
+        padding-top: 51px;
+    }
+    
+    .btn-lg {
+        padding: 10px 25px !important;
+    }
+    
+    #team {
+        background: #085078;
+        /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #85D8CE, #085078);
+        /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #85D8CE, #085078);
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        color: black;
+        font-family: cursive;
+        text-align: center;
+    }
+    
+    h6 {
+        font-weight: 600 !important;
+    }
+    
+    .dp {
+        border-radius: 50%;
+        padding-top: 40px;
+    }
+    
+    .fab {
+        padding-left: 3px;
+    }
+    
+    a {
+        text-decoration: none !important;
+    }
