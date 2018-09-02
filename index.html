@@ -45,7 +45,7 @@
                     <img src="assets/mobi.png" class="img-responsive ">
                 </a>
             </div>
-            <div class="collapse navbar-collapse" id="myNavbar">
+            <div class="collapse navbar-collapse " id="myNavbar">
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="#">Home</a></li>
                     <li><a href="#timeline">Timeline</a></li>
@@ -54,10 +54,11 @@
                     <li><a href="#FAQs">FAQs</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#register" type="button"><span class="glyphicon glyphicon-user"></span> Register</a></li>
+                    <li><a onclick="document.getElementById('id01').style.display='block'" style="cursor:pointer;" type="button"><span class="glyphicon glyphicon-user"></span> Register</a></li>
                 </ul>
             </div>
         </div>
+
     </nav>
 
     <div class="container-fluid">
@@ -78,21 +79,21 @@
                         <img src="assets/slide1.jpg" alt="Chania">
                         <div class="carousel-caption jumbotron">
                             <h1>Mobicom</h1>
-                            <p>Mobicom is a competitive platform to present ideas, develop mobile apps and win exciting cash prizes.</p>
+                            <p>Mobicom is a competitive platform to present ideas, develop Apps and win exciting cash prizes.</p>
                         </div>
                     </div>
 
                     <div class="item" style="background-image: url(assets/slide2.jpg); background-size: cover;">
                         <img src="assets/slide2.jpg " alt="Chicago " class="img-responsive ">
                         <div class="carousel-caption jumbotron">
-                            <h2>Present your mobile app idea</h2>
+                            <h2>Present your Mobile or Web app idea</h2>
                         </div>
                     </div>
 
                     <div class="item " style="background-image: url(assets/slide3.jpg); background-size: cover; background-position: 20%;">
                         <img src="assets/slide3.jpg " alt="New York " class="img-responsive">
                         <div class="carousel-caption jumbotron">
-                            <h2><strong>Design, develop and test your mobile app</strong></h2>
+                            <h2><strong>Design, develop and test your App</strong></h2>
                         </div>
                     </div>
                     <div class="item " style="background-image: url(assets/slide4.jpg); background-size:cover; background-position:70%;  ">
@@ -119,24 +120,46 @@
         </a>
         <div class="row jumbotron" id="timeline">
             <h1>Timeline</h1><br>
-            <div class="col-sm-4 flash">
+            <div class="col-sm-4">
                 <i class="fas fa-address-card flash"><span>  Register</span></i>
                 <h6>xx/xx/xx</h6><br>
 
             </div>
             <div class="col-sm-4" id="tm">
                 <i class="fab fa-accusoft"><span>  Round 1</span></i>
-                <h5>Present app idea</h5>
+                <h5>Present Mobile or Web idea</h5>
                 <h6>xx/xx/xx</h6><br>
 
             </div>
             <div class="col-md-4">
                 <i class="fab fa-affiliatetheme"><span>  Round 2</span></i>
-                <h5>Present mobile app</h5>
+                <h5>Present your app</h5>
                 <h6>xx/xx/xx</h6><br><br>
             </div>
+            <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;" class="btn btn-primary btn-lg ">Apply</button>
+            <div id="id01" class="modal">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                <form class="modal-content" method="POST" action="https://formspree.io/mohd.umar.cse.2017@miet.ac.in">
+                    <div class="container">
+                        <h1>Apply</h1>
+                        <p>Please fill in this form.</p>
+                        <hr>
+                        <div>
+                            <label for="Name"><b>Name</b></label>
+                            <input type="text" placeholder="Enter your name" name="name" required pattern="^[a-zA-Z0-9_\.]+@[a-zA-Z_]+[\.a-zA-Z]{1,9}$">
+                        </div>
+                        <div>
+                            <label for="email"><b>Email</b></label>
+                            <input type="text" placeholder="Enter Email" name="email" required>
+                        </div>
 
-            <a href="#register" class="btn btn-primary btn-lg " role="button">Apply</a>
+                        <div class="clearfix">
+                            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                            <button type="submit" class="signupbtn">Sign Up</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
 
         </div>
         <div id="coc" class="row">
@@ -144,7 +167,7 @@
             <div class="col-md-6">
                 <h3>Rules for Round 2</h3>
                 <ol type="a">
-                    <li>Selected teams will develop and present their mobile applications</li>
+                    <li>Selected teams will develop and present their mobile or web applications</li>
                     <li>Selected teams will also have to present source code of their application. We DO NOT require you to submit your source code. Although, selected teams will have to explain working of their application on basis of their source code.</li>
                     <li>Selected teams will have to present live demo of their application and its functionalities.
                         <li>All teams
@@ -159,7 +182,7 @@
             </div>
             <div class="col-md-6">
                 <h3>Content Restrictions</h3>
-                The submitted ideas and/or mobile apps must not contain
+                The submitted ideas and/or apps must not contain
                 <ol type="a">
                     <li>Nudity, lewd or vulgar behaviour.</li>
                     <li>Material that violates or infringes another’s rights, including but not limited to privacy.</li>
@@ -328,19 +351,89 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div id="FAQs">
+        <div id="FAQs" class="row">
+            <div class="col-md-6 ">
+                <h1 class="jumbotron">Have a question?</h1>
+                <form method="POST" action="http://formspree.io/mohd.umar.cse.2017@miet.ac.in">
 
+                    <div class=query>
+                        <!-- Pattern matches email! [mode than one char]@[mode than one char].[between 1 - 9 char]
+                        Using respective matching groups.	-->
+                        <label for="email">Email</label>
+                        <input type="text" pattern="^[a-zA-Z0-9_\.]+@[a-zA-Z_]+[\.a-zA-Z]{1,9}$" id="email" name="email" required />
+                    </div>
+                    <div class="query">
+                        <label for="query">Query</label>
+                        <textarea name="query" required></textarea>
+                    </div>
+                    <div>
+                        <button class="btn-danger" type="submit" title="Ask Team Mobicom"><i class="fas fa-comment"></i></button>
+                    </div>
+                </form>
+            </div>
+            <div id="faqs" class="col-md-6">
+                <h4>Frequently asked questions</h4>
+                <div class="faq-container">
+                    <span class="question primary-colored">Is there a fee charged for participating in Mobicom 2017?</span>
+                    <span class="answer is-visible">Yes, there is a registration fee of Rs. 100 per team. Registration fee is not
+                applicable if the team is from MIET/MIT, Meerut.</span>
+                </div>
+                <div class="faq-container">
+                    <span class="question primary-colored">Who can participate in Mobicom 2017?</span>
+                    <span class="answer is-visible">Anyone with an idea for a mobile app is eligible for participating in Mobicom 2017.</span>
+                </div>
+                <div class="faq-container">
+                    <span class="question primary-colored">Where can I apply?</span>
+                    <span class="answer is-visible"><a href="#apply" class="accented-anchor" target="_blank">Here!</a></span>
+                </div>
+                <div class="faq-container">
+                    <span class="question primary-colored">How many ideas can a single team submit?</span>
+                    <span class="answer is-visible">Any team can submit upto maximum of 3 ideas and each participating team is
+                required to submit atleast 1 idea.</span>
+                </div>
+                <div class="faq-container">
+                    <span class="question primary-colored">What information should we include at time of submitting the idea?</span>
+                    <span class="answer is-visible">Submitted idea should be an original work of team and/or its members.
+                    <ul>
+                        <li>You must mention the problem domain solved by your idea.</li>
+                        <li>Include goals and functions that your mobile app will perform.</li>
+                        <li>Mention your target audience; who will be using your mobile app once its deployed for the masses.</li>
+                        <li>Make sure if the idea you are submitting can be transformed into a robust mobile app in the given timeframe.</li>
+                    </ul>
+                </span>
+                </div>
+                <div class="faq-container">
+                    <span class="question primary-colored">Which mobile OSs are we free to target for our mobile apps?</span>
+                    <span class="answer is-visible">You are free to target any platform of your choice, be it iOS,
+                    Windows Phone or Android. Mobicom has no restrictions on platforms, however, you are required to make
+                    mobile apps. Presenting any other kind of software program will lead to disqualification of team.</span>
+                </div>
+                <div class="faq-container">
+                    <span class="question primary-colored">What is the judging process in Mobicom 2017?</span>
+                    <span class="answer is-visible">In Mobicom 2017, your idea will be judged on the basis of practicality &amp;
+                    originality, and your mobile app will be judged on the basis of its usability and quality.</span>
+                </div>
+                <div class="faq-container">
+                    <span class="question primary-colored">How can I submit more than one ideas?</span>
+                    <span class="answer is-visible">The idea presentation process is same for all ideas. If your team has
+                    more than one idea, please make sure you submit all of your ideas under the same team name along with the same
+                    team members.</span>
+                </div>
+            </div>
+        </div>
     </div>
-    </div>
+
+
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAN69IlP9jPu49xMy6VJNmxd3dorWOSHj4&callback=initMap">
     </script>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
     <div>Icons made by <a href="https://www.flaticon.com/authors/ddara" title="dDara">dDara</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0"
             target="_blank">CC 3.0 BY</a></div>
+
 </body>
 
 </html>
