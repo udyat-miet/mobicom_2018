@@ -32,26 +32,26 @@
     <![endif]-->
 </head>
 
-<body>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                                      <span class="icon-bar"></span>
+                                     <span class="icon-bar"></span>
                                       <span class="icon-bar"></span>
                                       <span class="icon-bar"></span> 
-                                    </button>
+                </button>
                 <a class="navbar-brand" href="#">
                     <img src="assets/mobi.png" class="img-responsive ">
                 </a>
             </div>
             <div class="collapse navbar-collapse " id="myNavbar">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Home</a></li>
+                    <li class="active"><a href="#home">Home</a></li>
                     <li><a href="#timeline">Timeline</a></li>
                     <li><a href="#coc">Code of Conduct</a></li>
                     <li><a href="#team">Team</a></li>
-                    <li><a href="#FAQs">FAQs</a></li>
+                    <li><a href="#FAQs">Get in touch</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a onclick="document.getElementById('id01').style.display='block'" style="cursor:pointer;" type="button"><span class="glyphicon glyphicon-user"></span> Register</a></li>
@@ -74,7 +74,7 @@
                 </ol>
 
                 <!-- Wrapper for slides -->
-                <div class="carousel-inner">
+                <div class="carousel-inner" id="home">
                     <div class="item active" style="background-image: url(assets/slide1.jpg); background-size: cover;background-position:center;">
                         <img src="assets/slide1.jpg" alt="Chania">
                         <div class="carousel-caption jumbotron">
@@ -118,6 +118,11 @@
         <a href="https://miet.ac.in" title="Meerut Institute of Engineering and technology" id="miet-logo">
             <img class="img-responsive" src="assets/miet-logo.png" alt="MIET">
         </a>
+
+        <a href="https://udyat-miet.github.io/" title="Udyat" id="udyat-logo">Udyat
+                  <i style="font-size:30px" class="fa"> &#xf104; &#47; &#xf105;</i>
+        </a>
+
         <div class="row jumbotron" id="timeline">
             <h1>Timeline</h1><br>
             <div class="col-sm-4">
@@ -139,9 +144,9 @@
             <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;" class="btn btn-primary btn-lg ">Apply</button>
             <div id="id01" class="modal">
                 <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-                <form class="modal-content" method="POST" action="https://formspree.io/mohd.umar.cse.2017@miet.ac.in">
-                    <div class="container">
-                        <h1>Apply</h1>
+                <!--<form class="modal-content" method="POST" action="https://formspree.io/mohd.umar.cse 2018@miet.ac.in">-->
+                <div class="container">
+                    <!--<h1>Apply</h1>
                         <p>Please fill in this form.</p>
                         <hr>
                         <div>
@@ -150,21 +155,37 @@
                         </div>
                         <div>
                             <label for="email"><b>Email</b></label>
-                            <input pattern="^[a-zA-Z0-9_\.]+@[a-zA-Z_]+[\.a-zA-Z]{1,9}$" type="text" placeholder="Enter Email" name="email" required>
+                            <input pattern="^[a-zA-Z0-9_\.]+@[a-zA-Z_]+[\.a-zA-Z]{1,9}$" type="text" placeholder="Enter Email" name="_replyto" required>
                         </div>
-
+                        <input type="hidden" name="_next" value="https://umaralam48.github.io/mobicom_2018" />
+                        <input type="text" name="_gotcha" style="display:none" />
                         <div class="clearfix">
                             <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
                             <button type="submit" class="signupbtn">Sign Up</button>
-                        </div>
-                    </div>
-                </form>
+                        </div>-->
+                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe_CJVrmBubruZrkeNTkCDvBl5d033n-zzyvouVf5817I6ckQ/viewform?embedded=true" width="640" height="1366" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+                </div>
             </div>
 
         </div>
+
         <div id="coc" class="row">
             <h1 class="jumbotron" style="text-align:center;"><b>Code of Conduct</b></h1>
-            <div class="col-md-6">
+            <div class="col-md-4">
+                <h3>Rules for Round 1</h3>
+                <ol type="a">
+                    <li>This round is about idea pitching</li>
+                    <li>All teams
+                        <ol type="i">
+                            <li>will be allotted 5 minutes to present their idea</li>
+                            <li>should bring their presentation in a pendrive</li>
+                            <li>Projector and Laptop will be provided with an option to display the presentation.</li>
+                        </ol>
+                    </li>
+                    <li>Top 20 will be selected for round 2 on the basis of originality &amp; practicality of idea and usability of presented mobile app</li>
+                </ol>
+            </div>
+            <div class="col-md-4" id="midcol">
                 <h3>Rules for Round 2</h3>
                 <ol type="a">
                     <li>Selected teams will develop and present their mobile or web applications</li>
@@ -180,7 +201,7 @@
                         <li>Winner will be selected on the basis of originality &amp; practicality of idea and usability of presented mobile app</li>
                 </ol>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-4">
                 <h3>Content Restrictions</h3>
                 The submitted ideas and/or apps must not contain
                 <ol type="a">
@@ -194,7 +215,6 @@
                     <li>Material that includes content that is deemed inappropriate, indecent, obscene or otherwise does not comply with the Content Restrictions, as determined by Contest Administrator in its sole disc.</li>
                     </li>
                 </ol>
-                <br><br>
             </div>
         </div>
 
@@ -205,13 +225,13 @@
             <div class="row">
                 <div class="col-md-4">
 
-                    <img class="dp " src="assets/img/prof_mk.jpg" />
-                    <h4 class="name">Dr. Mukesh Rawat</h4>
+                    <img class="dp " src="assets/img/prof_pp.jpg" />
+                    <h4 class="name">Prof. Pradeep Pant</h4>
                     <h6 class="title">Head of Department<br />Department of Computer Science &amp; Engineering</h6>
                 </div>
                 <div class="col-md-4">
-                    <img class="dp " src="assets/img/prof_pp.jpg" />
-                    <h4 class="name">Prof. Pradeep Pant</h4>
+                    <img class="dp " src="assets/img/prof_mk.jpg" />
+                    <h4 class="name">Dr. Mukesh Rawat</h4>
                     <h6 class="title">Professor Incharge (CSE/IT)<br />Department of Computer Science &amp; Engineering</h6>
 
                 </div>
@@ -222,60 +242,16 @@
 
                 </div>
             </div>
+            <br>
+            <h1><b>Team</b></h1>
             <div class="row" id="Committee">
-                <br>
-                <h1><b>Team</b></h1>
-
-                <div class="col-md-1" id="f" style="padding-left: 25px">
-
-                    <img class="dp" src="assets/img/ashutosh.jpg" />
-                    <h4 class="name">Ashutosh Gangwar</h4>
-
-
-                    <h4 class="title">Committee</h4>
-
-
-                    <h4 class="linkedin">
-                        <a class="secondary-colored-dark" target="_blank" href="https://www.linkedin.com/in/ashutoshgngwr/"><i class="fab fa-linkedin-in"></i></a>
-                    </h4>
-
-                </div>
-                <div class="col-md-1">
-
-                    <img class="dp" src="assets/img/shagun.jpeg" /></h4>
-                    <h4 class="name">Shagun Malik</h4>
-
-
-                    <h4 class="title">Committee</h4>
-
-
-                    <h4 class="linkedin">
-                        <a class="secondary-colored-dark" target="_blank" href="https://www.linkedin.com/in/shagun-malik-672716152/"><i class="fab fa-linkedin-in"></i></a>
-                    </h4>
-
-                </div>
-                <div class="col-md-1">
+                <div class="col-md-3">
 
                     <img class="dp" src="assets/img/nishant.jpg" /></h4>
                     <h4 class="name">Nishant Sharma</h4>
 
 
-                    <h4 class="title">Committee</h4>
-
-
-                    <h4 class="linkedin">
-                        <a class="secondary-colored-dark" target="_blank" href="https://www.linkedin.com/in/nishant-sharna-58a349149">
-                            <i class="fab fa-linkedin-in"></i></a>
-                    </h4>
-
-                </div>
-                <div class="col-md-1">
-
-                    <img class="dp" src="assets/img/umar.jpg" /></h4>
-                    <h4 class="name">Umar Alam</h4>
-
-
-                    <h4 class="title">Committee</h4>
+                    <h4 class="title">Secretary</h4>
 
 
                     <h4 class="linkedin">
@@ -284,23 +260,25 @@
                         </a>
                         <div class="collapse" id="collapseExample">
                             <div class="card card-body">
-                                7417576582
+                                8265852848
                             </div>
                         </div>
-                        <a class="secondary-colored-dark" target="_blank" href="https://www.linkedin.com/in/mohdumaralam/">
-                            <i class="fab fa-linkedin-in"></i> </a>
-                        <a class="secondary-colored-dark" target="_blank" href="https://www.instagram.com/umar.alam.siddiqui/?hl=en">
+                        <a class="secondary-colored-dark" target="_blank" href="https://www.instagram.com/nishant_266/?hl=en">
                             <i class="fab fa-instagram"></i></a>
+                        <a class="secondary-colored-dark" target="_blank" href="https://www.linkedin.com/in/nishant-sharna-58a349149">
+                            <i class="fab fa-linkedin-in"></i></a>
                     </h4>
 
                 </div>
-                <div class="col-md-1">
+
+
+                <div class="col-md-3">
 
                     <img class="dp" src="assets/img/prachi.jpeg" /></h4>
                     <h4 class="name">Prachi Sharma</h4>
 
 
-                    <h4 class="title">Committee</h4>
+                    <h4 class="title">Vice Secretary</h4>
 
 
                     <h4 class="linkedin">
@@ -308,92 +286,96 @@
                     </h4>
 
                 </div>
-                <div class="col-md-1">
-
-                    <img class="dp" src="assets/img/ravi.jpeg" /></h4>
-                    <h4 class="name">Ravi<br> Soni </h4>
-
-
-                    <h4 class="title">Committee</h4>
-
-
-                    <h4 class="linkedin">
-                        <a class="secondary-colored-dark" target="_blank" href="https://www.linkedin.com/in/ravi-soni-32139198/"><i class="fab fa-linkedin-in"></i></a>
-                    </h4>
-
-                </div>
-                <div class="col-md-1">
-
-                    <img class="dp" src="assets/img/riya.png" /></h4>
-                    <h4 class="name">Riya Deshwal</h4>
-
-
-                    <h4 class="title">Committee</h4>
-
-
-                    <h4 class="linkedin">
-                        <a class="secondary-colored-dark" target="_blank" href="https://www.linkedin.com/in/riya-deshwal-9ab538152"><i class="fab fa-linkedin-in"></i></a>
-                    </h4>
-
-                </div>
-                <div class="col-md-1">
+                <div class="col-md-3">
 
                     <img class="dp" src="assets/img/tushit.jpeg" /></h4>
                     <h4 class="name">Tushit Agarwal</h4>
 
 
-                    <h4 class="title">Committee</h4>
+                    <h4 class="title">President</h4>
 
 
                     <h4 class="linkedin">
+                        <a class="secondary-colored-dark" target="_blank" href="https://www.linkedin.com/in/mohdumaralam/">
+                            <i class="fab fa-linkedin-in"></i> </a>
                     </h4>
 
                 </div>
-            </div>
-        </div>
-        <div id="FAQs" class="row">
-            <div class="col-md-6 ">
-                <h1 class="jumbotron">Have a question?</h1>
-                <form method="POST" action="http://formspree.io/mohd.umar.cse.2017@miet.ac.in">
+                <div class="col-md-3">
 
-                    <div class=query>
-                        <!-- Pattern matches email! [mode than one char]@[mode than one char].[between 1 - 9 char]
-                        Using respective matching groups.	-->
-                        <label for="email">Email</label>
-                        <input type="text" pattern="^[a-zA-Z0-9_\.]+@[a-zA-Z_]+[\.a-zA-Z]{1,9}$" id="email" name="email" required />
-                    </div>
-                    <div class="query">
-                        <label for="query">Query</label>
-                        <textarea name="query" required></textarea>
-                    </div>
-                    <div>
-                        <button class="btn-danger" type="submit" title="Ask Team Mobicom"><i class="fas fa-comment"></i></button>
-                    </div>
-                </form>
+                    <img class="dp" src="assets/img/umar.jpg" /></h4>
+                    <h4 class="name">Umar Alam</h4>
+
+
+                    <h4 class="title">Vice President</h4>
+
+
+                    <h4 class="linkedin">
+                        <a data-toggle="collapse" href="#nishantmo" role="button" aria-expanded="false" aria-controls="collapseExample">
+                            <i class="fas fa-phone-volume"></i>
+                        </a>
+                        <div class="collapse" id="nishantmo">
+                            <div class="card card-body">
+                                7417576582
+                            </div>
+                        </div>
+                        <a class="secondary-colored-dark" target="_blank" href="https://www.instagram.com/umar.alam.siddiqui/?hl=en">
+                            <i class="fab fa-instagram"></i></a>
+                        <a class="secondary-colored-dark" target="_blank" href="https://www.linkedin.com/in/mohdumaralam/">
+                            <i class="fab fa-linkedin-in"></i> </a>
+                    </h4>
+                    <br>
+                </div>
             </div>
-            <div id="faqs" class="col-md-6">
-                <h4>Frequently asked questions</h4>
-                <div class="faq-container">
-                    <span class="question primary-colored">Is there a fee charged for participating in Mobicom 2017?</span>
-                    <span class="answer is-visible">Yes, there is a registration fee of Rs. 100 per team. Registration fee is not
+
+            <div id="FAQs">
+                <div class="row">
+                    <div class="col-md-6 ">
+                        <h1 class="jumbotron">Have a question?</h1>
+                        <form id="query" method="POST" action="http://formspree.io/mohd.umar.cse.2017@miet.ac.in">
+
+                            <div>
+                                <!-- Pattern matches email! [mode than one char]@[mode than one char].[between 1 - 9 char]
+                        Using respective matching groups.	-->
+                                <label for="_replyto">Email</label>
+                                <input type="text" pattern="^[a-zA-Z0-9_\.]+@[a-zA-Z_]+[\.a-zA-Z]{1,9}$" name="_replyto" required />
+                            </div>
+                            <div>
+
+                                <label for="query">Query</label>
+                                <textarea name="query" required></textarea><span>  <button class="btn-danger" id="sub" type="submit" title="Ask Team Mobicom"><i class="fas fa-comment"></i></button></span>
+                            </div>
+
+
+
+
+                            <input type="hidden" name="_next" value="https://umaralam48.github.io/mobicom_2018" />
+                        </form>
+                    </div>
+                    <div id="faqs" class="col-md-6">
+                        <h1>Frequently asked questions</h1>
+                        <br>
+                        <div class="faq-container">
+                            <span class="question primary-colored">Is there a fee charged for participating in Mobicom 2018?</span>
+                            <span class="answer is-visible">Yes, there is a registration fee of Rs. 100 per team. Registration fee is not
                 applicable if the team is from MIET/MIT, Meerut.</span>
-                </div>
-                <div class="faq-container">
-                    <span class="question primary-colored">Who can participate in Mobicom 2017?</span>
-                    <span class="answer is-visible">Anyone with an idea for a mobile app is eligible for participating in Mobicom 2017.</span>
-                </div>
-                <div class="faq-container">
-                    <span class="question primary-colored">Where can I apply?</span>
-                    <span class="answer is-visible"><a href="#apply" class="accented-anchor" target="_blank">Here!</a></span>
-                </div>
-                <div class="faq-container">
-                    <span class="question primary-colored">How many ideas can a single team submit?</span>
-                    <span class="answer is-visible">Any team can submit upto maximum of 3 ideas and each participating team is
+                        </div>
+                        <div class="faq-container">
+                            <span class="question primary-colored">Who can participate in Mobicom 2018?</span>
+                            <span class="answer is-visible">Anyone with an idea for a mobile app is eligible for participating in Mobicom 2018.</span>
+                        </div>
+                        <div class="faq-container">
+                            <span class="question primary-colored">Where can I apply?</span>
+                            <span class="answer is-visible"><a onclick="document.getElementById('id01').style.display='block'" >Here!</a></span>
+                        </div>
+                        <div class="faq-container">
+                            <span class="question primary-colored">How many ideas can a single team submit?</span>
+                            <span class="answer is-visible">Any team can submit upto maximum of 3 ideas and each participating team is
                 required to submit atleast 1 idea.</span>
-                </div>
-                <div class="faq-container">
-                    <span class="question primary-colored">What information should we include at time of submitting the idea?</span>
-                    <span class="answer is-visible">Submitted idea should be an original work of team and/or its members.
+                        </div>
+                        <div class="faq-container">
+                            <span class="question primary-colored">What information should we include at time of submitting the idea?</span>
+                            <span class="answer is-visible">Submitted idea should be an original work of team and/or its members.
                     <ul>
                         <li>You must mention the problem domain solved by your idea.</li>
                         <li>Include goals and functions that your mobile app will perform.</li>
@@ -401,39 +383,53 @@
                         <li>Make sure if the idea you are submitting can be transformed into a robust mobile app in the given timeframe.</li>
                     </ul>
                 </span>
-                </div>
-                <div class="faq-container">
-                    <span class="question primary-colored">Which mobile OSs are we free to target for our mobile apps?</span>
-                    <span class="answer is-visible">You are free to target any platform of your choice, be it iOS,
+                        </div>
+                        <div class="faq-container">
+                            <span class="question primary-colored">Which mobile OSs are we free to target for our mobile apps?</span>
+                            <span class="answer is-visible">You are free to target any platform of your choice, be it iOS,
                     Windows Phone or Android. Mobicom has no restrictions on platforms, however, you are required to make
                     mobile apps. Presenting any other kind of software program will lead to disqualification of team.</span>
-                </div>
-                <div class="faq-container">
-                    <span class="question primary-colored">What is the judging process in Mobicom 2017?</span>
-                    <span class="answer is-visible">In Mobicom 2017, your idea will be judged on the basis of practicality &amp;
+                        </div>
+                        <div class="faq-container">
+                            <span class="question primary-colored">What is the judging process in Mobicom 2018?</span>
+                            <span class="answer is-visible">In Mobicom 2018, your idea will be judged on the basis of practicality &amp;
                     originality, and your mobile app will be judged on the basis of its usability and quality.</span>
-                </div>
-                <div class="faq-container">
-                    <span class="question primary-colored">How can I submit more than one ideas?</span>
-                    <span class="answer is-visible">The idea presentation process is same for all ideas. If your team has
+                        </div>
+                        <div class="faq-container">
+                            <span class="question primary-colored">How can I submit more than one ideas?</span>
+                            <span class="answer is-visible">The idea presentation process is same for all ideas. If your team has
                     more than one idea, please make sure you submit all of your ideas under the same team name along with the same
                     team members.</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+        <footer>
+            <div class="footerleft">
+                &copy; Meerut Institute of Engineering &amp; Technology, Meerut<br /> Designed with <i class="fas fa-heart"></i> by
+                <a href="https://sites.google.com/miet.ac.in/umaralam/home" class="accented-anchor" target="_blank">Umar Alam</a><br /> Source code licensed under
+                <a href="https://opensource.org/licenses/MIT" class="accented-anchor" target="_blank">
+                            MIT License</a>
+            </div>
+            <div class="footerright">
+                View <a href="https://github.com/umaralam48/mobicom_2018" class="accented-anchor" target="_blank">source code</a> on Github<br /> Based on <a href="https://getbootstrap.com/docs/4.0/getting-started/introduction/" class="accented-anchor"
+                    target="_blank">Bootstrap 4</a>
+
+            </div>
+
+        </footer>
 
 
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAN69IlP9jPu49xMy6VJNmxd3dorWOSHj4&callback=initMap">
-    </script>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script src="main.js"></script>
-    <div>Icons made by <a href="https://www.flaticon.com/authors/ddara" title="dDara">dDara</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0"
-            target="_blank">CC 3.0 BY</a></div>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAN69IlP9jPu49xMy6VJNmxd3dorWOSHj4&callback=initMap">
+        </script>
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script src="main.js"></script>
 
 </body>
+
 
 </html>
