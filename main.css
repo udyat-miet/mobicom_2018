@@ -63,7 +63,11 @@
     
     @media only screen and (max-width: 720px) {
         #miet-logo img {
-            width: 10%;
+            width: 60%;
+        }
+        #udyat-logo {
+            font-size: 80%;
+            right: 16px;
         }
         .carousel-caption h1,
         h2 {
@@ -83,7 +87,7 @@
         #tm,
         #tm>h5,
         #tm>h6 {
-            color: black!important;
+            color: white!important;
         }
         .carousel-inner>.item {
             height: 70vh !important;
