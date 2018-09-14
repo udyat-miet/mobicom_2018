@@ -61,7 +61,7 @@ h6 {
     padding-top: 61px;
 }
 
-.carousel-caption h1,
+.carousel-caption>h1,
 h2 {
     font-family: 'Orbitron', sans-serif !important;
 }
@@ -96,7 +96,7 @@ h2 {
         color: white!important;
     }
     .carousel-inner>.item {
-        height: 90vh !important;
+        height: 83vh !important;
     }
     .carousel-inner>.item>img {
         display: none !important;
